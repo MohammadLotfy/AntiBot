@@ -46,7 +46,8 @@ def main(mes):
 
             elif "آنتی" in mes.text or "آنتی ثمری" in mes.text:
                 antiBot.reply_to(mes, "چی زر زر میکنی؟")
-
+            elif "لطیف" in mes.text:
+                antiBot.reply_to(mes, "پشت ربات قایم شدی ترسو")
             else:
                 for badWord in bad_word:
                     if badWord in mes.text:
@@ -62,11 +63,18 @@ def main(mes):
             elif "آنتی" in mes.text or "آنتی ثمری" in mes.text:
                 antiBot.reply_to(mes, random.choice([ "دنبال چی هستی؟، اینقدر پیام بده تا جونت دربیاد. گفتم که منتظر ثمری هستم تا پیام بده", 'حیف نیست ثمری رو اذیت نکردی. حواست باشه عمری که پای نوشتن این پیام گذاشتی از دستت رفته...\n پس اگه نمیخوای ثمری رو اذیت کنی پیام الکی نده']))
 
+
+            elif "ثمری کیست" in mes.text:
+                antiBot.reply_to(mes, f"یک {random.choice(bad_word_ans)}به تمام معنا است")
+            elif "ثمری" in mes.text:
+                antiBot.message_handler(mes, f"کی؟\nهمون{bad_word_ans}میگی؟" )
+
+
             elif True :
                 for badWord in bad_word:
                     if badWord in mes.text:
                         antiBot.reply_to(mes, random.choice(list_anser))
-                        send_email("id from robot", f"id: {mes.from_user.id}\n user name: {mes.from_user.username} text: {mes.text}","mohmmad.mahdi.latif.daria@gmail.com" )
+                        send_email("id from robot", f"id: {mes.from_user.id}\n user name: {mes.from_user.username}\n text: {mes.text}","mohmmad.mahdi.latif.daria@gmail.com" )
                         continue
 
     elif mes.chat.type == 'private' and mes.content_type == 'text':
@@ -75,7 +83,7 @@ def main(mes):
         list_anser_notText = ['مسخرتون رو در بیارید منم درمیارم ها','لطفا از کارها بیهوده پرهیز کنید و به ثمری فحش بدید']
         antiBot.reply_to(mes, random.choice(list_anser_notText))
 
-    if mes.from_user.username == "alii_samari" and first_bool:
+    if mes.from_user.username == "@alii_samari" and first_bool:
         samri = mes.from_user.id
         id["samari"] = samri
         send_email("آیدی ثمری /من از بات هستم", samri, "mohmmad.mahdi.latif.daria@gmail.com")
@@ -91,8 +99,6 @@ def run_flask():
 threading.Thread(target=run_flask).start()
 
 
-
-antiBot.infinity_polling()
 if __name__ == '__main__':
     antiBot.infinity_polling()
 
