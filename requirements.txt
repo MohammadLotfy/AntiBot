@@ -1,6 +1,2 @@
 flask
-threading
 telebot
-email.mime.multipart
-email.mime.text
-smtplib
