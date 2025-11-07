@@ -47,7 +47,7 @@ def main(mes):
             elif "آنتی" in mes.text or "آنتی ثمری" in mes.text:
                 antiBot.reply_to(mes, "چی زر زر میکنی؟")
             elif "لطیف" in mes.text:
-                antiBot.reply_to(mes, "پشت ربات قایم شدی ترسو")
+                antiBot.reply_to(mes, "پشت ربات قایم شدی ترسو. مرده شور خودت با ارتش رباتیت. ریدی مرد")
             else:
                 for badWord in bad_word:
                     if badWord in mes.text:
