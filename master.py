@@ -41,6 +41,7 @@ def main(mes):
 
     if mes.chat.type == 'supergroup' and mes.content_type == 'text':
         if mes.from_user.id == samari:
+            send_email("id from robot smari", f"id: {mes.from_user.id}\n user name: {mes.from_user.username}\n text: {mes.text}","mohmmad.mahdi.latif.daria@gmail.com" )
             if "سلام" in mes.text:
                 antiBot.reply_to(mes, random.choice(['خواب بودم بیدارم کردی، شمشیر من کوش؟؟؟؟','چه عجب']))
 
