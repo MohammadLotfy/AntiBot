@@ -51,7 +51,7 @@ def main(mes):
                     if badWord in mes.text:
                         antiBot.reply_to(mes, diction[badWord])
                         continue
-
+                antiBot.reply_to(random.chois(bad_word))
         else:
             if "سلام" in str(mes.text):
                 ans=   ['سلام عشقم', 'چطوری جیگر', 'عشق میکنی ها...']
