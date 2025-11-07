@@ -2,7 +2,6 @@
 from basic import *
 from sourcOFemail import *
 import telebot
-import time
 import random
 from flask import Flask
 import threading
