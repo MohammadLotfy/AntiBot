@@ -24,7 +24,7 @@ list_anser = ["لطفا ادب رو رعایت کنید",'لطفا از کاره
 bad_word_ans = ['گه خور', 'زر مفت زن', 'کره خر','آشغال','ریقو','کونی','کص کش','بیشعور','خایه مال']
 bad_word = diction.keys()
 # smari id
-id = {"samari": "1087968824"}
+id = {"samari": "6714357177"}
 first_bool = bool(id["samari"] != "")
 samari = int(id["samari"])
 
