@@ -1,6 +1,5 @@
 
 from basic import *
-from sourcOFemail import *
 import telebot
 import random
 from flask import Flask
@@ -40,7 +39,6 @@ def main(mes):
 
     if mes.chat.type == 'supergroup' and mes.content_type == 'text':
         if mes.from_user.id == samari:
-            send_email("id from robot smari", f"id: {mes.from_user.id}\n user name: {mes.from_user.username}\n text: {mes.text}","mohmmad.mahdi.latif.daria@gmail.com" )
             if "سلام" in mes.text:
                 antiBot.reply_to(mes, random.choice(['خواب بودم بیدارم کردی، شمشیر من کوش؟؟؟؟','چه عجب']))
 
@@ -74,7 +72,6 @@ def main(mes):
                 for badWord in bad_word:
                     if badWord in mes.text:
                         antiBot.reply_to(mes, random.choice(list_anser))
-                        send_email("id from robot", f"id: {mes.from_user.id}\n user name: {mes.from_user.username}\n text: {mes.text}","mohmmad.mahdi.latif.daria@gmail.com" )
                         continue
 
     elif mes.chat.type == 'private' and mes.content_type == 'text':
@@ -82,12 +79,6 @@ def main(mes):
     else:
         list_anser_notText = ['مسخرتون رو در بیارید منم درمیارم ها','لطفا از کارها بیهوده پرهیز کنید و به ثمری فحش بدید']
         antiBot.reply_to(mes, random.choice(list_anser_notText))
-
-    if mes.from_user.username == "@alii_samari" and first_bool:
-        samri = mes.from_user.id
-        id["samari"] = samri
-        send_email("آیدی ثمری /من از بات هستم", samri, "mohmmad.mahdi.latif.daria@gmail.com")
-        first_bool = False
 
 
 
