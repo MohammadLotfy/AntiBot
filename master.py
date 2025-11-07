@@ -16,8 +16,7 @@ def homepage():
 
 
 #creat my frist bot
-antiBot = telebot.TeleBot('8100788778:AAHn0AR9Xcrr6oFTMIa3Uaq2Aph8fka2u-E')
-
+antiBot = telebot.TeleBot('8596596102:AAGQ0y4TlOjUWPmUdaKVYv5hnCy3XBoUonk')
 #strat bot code
 @antiBot.message_handler(commands=['start'])
 def send_welcome(mas):
